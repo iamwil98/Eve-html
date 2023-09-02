@@ -218,6 +218,7 @@ function validateForm(){
 
     let email = document.getElementById('inputEmail').value;
     let name = document.getElementById('inputName').value;
+    let password = document.getElementById('inputPassword').value;
     let phone = document.getElementById('inputPhone').value;
 
     if (email == "") {
@@ -230,6 +231,11 @@ function validateForm(){
 
     if (name == "") {
         alert('El nombre es requerido');
+        return false;
+    }
+
+    if (password == "") {
+        alert('La contraseña es requerida');
         return false;
     }
 
@@ -258,6 +264,7 @@ function showData(){
         html += "<tr>";
         html += "<td>" + element.email + "</td>";
         html += "<td>" + element.name + "</td>";
+        html += "<td>" + element.password + "</td>";
         html += "<td>" + element.phone + "</td>";
         html += '<td><button onclick="deleteData('+ index +')" class="btn btn-danger">Eliminar dato</button> <button onclick="updateData('+ index +')" class="btn btn-warning">Editar dato</button></td>';
         html += "</tr>";
@@ -273,6 +280,7 @@ function AddData(){
     if (validateForm() == true) {
         let email = document.getElementById('inputEmail').value;
         let name = document.getElementById('inputName').value;
+        let password = document.getElementById('inputPassword').value;
         let phone = document.getElementById('inputPhone').value;
 
         var listPeople;
@@ -285,6 +293,7 @@ function AddData(){
         listPeople.push({
             email: email,
             name: name,
+            password: password,
             phone: phone,
         });
 
@@ -294,6 +303,7 @@ function AddData(){
 
         document.getElementById('inputEmail').value = "";
         document.getElementById('inputName').value = "";
+        document.getElementById('inputPassword').value = "";
         document.getElementById('inputPhone').value = "";
     }
 }
@@ -328,12 +338,14 @@ function updateData(index){
 
     document.getElementById('inputEmail').value = listPeople[index].email;
     document.getElementById('inputName').value = listPeople[index].name;
+    document.getElementById('inputPassword').value = listPeople[index].password;
     document.getElementById('inputPhone').value = listPeople[index].phone;
 
     document.querySelector("#btnUpdate").onclick = function(){
         if (validateForm() == true) {
             listPeople[index].email = document.getElementById('inputEmail').value;
             listPeople[index].name = document.getElementById('inputName').value;
+            listPeople[index].name = document.getElementById('inputPassword').value;
             listPeople[index].phone = document.getElementById('inputPhone').value;
 
             localStorage.setItem('listPeople', JSON.stringify(listPeople));
@@ -341,7 +353,8 @@ function updateData(index){
 
             document.getElementById('inputEmail').value = "";
             document.getElementById('inputName').value = "";
-            document.getElementById('inputPhone').value = "";
+            document.getElementById('inputPassword').value = "";
+            document.getElementById('inputPhone').value = ""; 
 
             document.getElementById("btnAdd").style.display = 'block';
             document.getElementById("btnUpdate",btnAdd).style.display = 'none';
