@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SuperMercado El Campesinito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="app.js" async></script>
+    <link rel="stylesheet" href="/css/styles">
+
+
+    <style>
+         .informacion {
+      display: none;
+    }
+    </style>
+
+    <style>
+         .infoservicios {
+        display: none;
+      }
+    </style>
+
+
+<style>
+    .infocontactos {
+   display: none;
+ }
+</style>
+
+<style>
+    .infosolicitud {
+   display: none;
+ }
+</style>
+
+
+<style>
+    .infocotizar {
+   display: none;
+ }
+</style>
+
+
+<style>
+    .infoproveedor {
+   display: none;
+ }
+</style>
+    
+</head>
+
+
+<body>
+
+    <div id="container">
+        <div class="logo"></div>
+        <div class="bottom_part"></div>
+    </div>
+ 
+
+
+<div class="titulo__1">
+	<h2><span class="typed"></span></h2>
+		</div>
+    </div>
+   
+    
+    <HR>
+        <P>
+            
+        </P>
+    </HR>
+
+    
+    <center>
+
+    <label for="Nuestro-Supermercado"> Nuestro SuperMercado</label>
+   <select id="Nuestro-Supermercado" onclick="nuestrosuper()">  
+    <option value=""></option>  
+    <option value="Misión">Misión</option>
+    <option value="Visión">Visión</option>
+    <option value="Sucursales">Sucursales</option>
+   </select>
+
+   <div id="Misión" class="informacion">
+    <div class="mision__">
+        <div class="tabla__texto">
+    <p>Nuestra misión es ofrecer a nuestros clientes productos frescos y de alta calidad, con el fin de promover la comercialización de productos netamente campesinos, dando bienestar a los campesinos y sus diferentes comunidades. </p>
+   </div>
+</div>
+   <video controls>
+    <source src="imagenes/stock-footage-agriculture-senior-farmer-walks-through-green-field-with-harvest-box-agricultural-business (1).webm" type="video/mp4">
+   </video>
+</div>
+
+   <div id="Visión" class="informacion">
+    <div class="vision__">
+        <div class="tabla__texto">
+    <p>Nuestra visión es convertirnos en distribuidores principales, siendo reconocidos por la excelencia de los productos y ser promotores las practicas sostenibles del sector agrícola. </p>
+   </div>
+</div>
+   <video controls>
+    <source src="imagenes/stock-footage-hand-watering-a-young-plant.webm">
+   </video>
+</div>
+
+
+
+
+   <div id="Sucursales" class="informacion">
+    <center>
+        <p>Estamos ubicados en Antioquia y Nariño, podras encontrar nuestras ubicaciones en la opción de contacto</p>
+    </center>
+    
+   </div>
+
+   <script>
+    function nuestrosuper () {
+        var selectElement = document.getElementById("Nuestro-Supermercado");
+        var selectedValue = selectElement.value;
+        
+        var contenidoElements = document.getElementsByClassName("informacion");
+            for (var i = 0; i < contenidoElements.length; i++) {
+                contenidoElements[i].style.display = "none";
+            
+            }
+
+            var contenidoElement = document.getElementById(selectedValue);
+            if (contenidoElement) {
+                contenidoElement.style.display = "block";
+            }
+
+        }
+   </script>
+
+
+
+
+   <label for=" Nuestros-Servicios"> Nuestros Servicios</label>
+   <select id="Nuestros-Servicios" onclick="nuestrosservicios()">  
+    <option value=""></option>  
+    <option value="Venta de productos">Venta de productos</option>
+    <option value="Cotizaciones">Cotizaciones</option>
+    <option value="Proveedores">Proveedores</option>
+   </select>
+   
+
+   <div id="Venta de productos" class="infoservicios">
+    <p>Los productos</p>
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">panal de huevos</span>
+                <img src="imagenes/huevos.jpeg"  alt="" class="img-item">
+                <span class="precio-item">$30.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">papa pastusa</span>
+                <img src="imagenes/papa.jpeg" height="185px" width="273px" alt="" class="img-item">
+                <span class="precio-item">$2.400</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">espinaca</span>
+                <img src="imagenes/espinaca.jpeg" alt="" class="img-item">
+                <span class="precio-item">$4.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">lechuga</span>
+                <img src="imagenes/lechuga.jpeg" alt="" class="img-item">
+                <span class="precio-item">$5.800</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">yuca</span>
+                <img src="imagenes/yuca.jpeg" alt="" class="img-item">
+                <span class="precio-item">$5.400</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">aguacate</span>
+                <img src="imagenes/aguacate.jpeg" alt="" class="img-item">
+                <span class="precio-item">$4.700</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">coliflor</span>
+                <img src="imagenes/coliflor.jpeg" alt="" class="img-item">
+                <span class="precio-item">$4.900</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">garbanzo</span>
+                <img src="imagenes/garbanzo.jpeg" alt="" class="img-item">
+                <span class="precio-item">$6.900</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            
+        </div>
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items">
+                <!-- 
+                <div class="carrito-item">
+                    <img src="img/boxengasse.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Box Engasse</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$15.000,00</span>
+                    </div>
+                   <span class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </span>
+                </div>
+                <div class="carrito-item">
+                    <img src="img/skinglam.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Skin Glam</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="3" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$18.000,00</span>
+                    </div>
+                   <button class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </button>
+                </div>
+                 -->
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        $120.000,00
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+    
+   </div>
+
+   <div id="Cotizaciones" class="infoservicios">
+    <br>
+    <p>Para realizar cotizaciones con el SuperMercado El campesinito</p><p>
+        puede comunicarse a la línea de WhatsApp, ubicada en la opción "Contactenos"
+    </p>
+  </br>
+   </div>
+
+   <div id="Proveedores" class="infoservicios">
+    <p>Los Proveedores</p>
+    
+<div class="aliniacion">
+
+
+    <div class="card">
+        <svg class="img-1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="100%" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 784.37 1277.39" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Layer_x0020_1">
+             <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+             <g id="_1421394342400">
+              <g>
+               <polygon fill="#343434" fill-rule="nonzero" points="392.07,0 383.5,29.11 383.5,873.74 392.07,882.29 784.13,650.54"></polygon>
+               <polygon fill="#8C8C8C" fill-rule="nonzero" points="392.07,0 -0,650.54 392.07,882.29 392.07,472.33"></polygon>
+               <polygon fill="#3C3C3B" fill-rule="nonzero" points="392.07,956.52 387.24,962.41 387.24,1263.28 392.07,1277.38 784.37,724.89"></polygon>
+               <polygon fill="#8C8C8C" fill-rule="nonzero" points="392.07,1277.38 392.07,956.52 -0,724.89"></polygon>
+               <polygon fill="#141414" fill-rule="nonzero" points="392.07,882.29 784.13,650.54 392.07,472.33"></polygon>
+               <polygon fill="#393939" fill-rule="nonzero" points="0,650.54 392.07,882.29 392.07,472.33"></polygon>
+              </g>
+             </g>
+            </g>
+           </svg>
+        
+        <div class="textBox">
+          <p class="text head">pacific frutis</p>
+          <span></span>
+          <p class="text price">Buenaventura</p>
+        </div>
+      </div>
+          
+      <div class="card-1">
+        <svg class="img" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="100%" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 784.37 1277.39" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Layer_x0020_1">
+             <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+             <g id="_1421394342400">
+              <g>
+               <polygon fill="#343434" fill-rule="nonzero" points="392.07,0 383.5,29.11 383.5,873.74 392.07,882.29 784.13,650.54"></polygon>
+               <polygon fill="#8C8C8C" fill-rule="nonzero" points="392.07,0 -0,650.54 392.07,882.29 392.07,472.33"></polygon>
+               <polygon fill="#3C3C3B" fill-rule="nonzero" points="392.07,956.52 387.24,962.41 387.24,1263.28 392.07,1277.38 784.37,724.89"></polygon>
+               <polygon fill="#8C8C8C" fill-rule="nonzero" points="392.07,1277.38 392.07,956.52 -0,724.89"></polygon>
+               <polygon fill="#141414" fill-rule="nonzero" points="392.07,882.29 784.13,650.54 392.07,472.33"></polygon>
+               <polygon fill="#393939" fill-rule="nonzero" points="0,650.54 392.07,882.29 392.07,472.33"></polygon>
+              </g>
+             </g>
+            </g>
+           </svg>
+        
+        <div class="textBox-1">
+          <p class="text head-1">A.S.J. frupacol</p>
+          <span></span>
+          <p class="text price-1">boyaca</p>
+        </div>
+      </div>
+
+      <div class="textBox">
+        <p class="text head">fruti paisa</p>
+        <span></span>
+        <p class="text price">Antioquia</p>
+      </div>
+    </div>
+        
+    <div class="card-2">
+        <svg class="img" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="100%" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 784.37 1277.39" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Layer_x0020_1">
+             <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+             <g id="_1421394342400">
+              <g>
+               <polygon fill="#343434" fill-rule="nonzero" points="392.07,0 383.5,29.11 383.5,873.74 392.07,882.29 784.13,650.54"></polygon>
+               <polygon fill="#8C8C8C" fill-rule="nonzero" points="392.07,0 -0,650.54 392.07,882.29 392.07,472.33"></polygon>
+               <polygon fill="#3C3C3B" fill-rule="nonzero" points="392.07,956.52 387.24,962.41 387.24,1263.28 392.07,1277.38 784.37,724.89"></polygon>
+               <polygon fill="#8C8C8C" fill-rule="nonzero" points="392.07,1277.38 392.07,956.52 -0,724.89"></polygon>
+               <polygon fill="#141414" fill-rule="nonzero" points="392.07,882.29 784.13,650.54 392.07,472.33"></polygon>
+               <polygon fill="#393939" fill-rule="nonzero" points="0,650.54 392.07,882.29 392.07,472.33"></polygon>
+              </g>
+             </g>
+            </g>
+           </svg>
+      
+      <div class="textBox-2">
+        <p class="text head-2">La cosecha</p>
+        <span></span>
+        <p class="text price-2">Antioquia</p>
+      </div>
+    </div>
+     <br>     
+
+   </div>
+   </div>
+
+  
+   
+
+</div>
+   <script>
+    function nuestrosservicios () {
+        var selectElement = document.getElementById("Nuestros-Servicios");
+        var selectedValue = selectElement.value;
+        
+        var contenidoElements = document.getElementsByClassName("infoservicios");
+            for (var i = 0; i < contenidoElements.length; i++) {
+                contenidoElements[i].style.display = "none";
+            
+            }
+
+            var contenidoElement = document.getElementById(selectedValue);
+            if (contenidoElement) {
+                contenidoElement.style.display = "block";
+            }
+
+        }
+   </script>
+
+
+
+
+
+   
+
+   <label for=" Contáctenos"> Contáctenos</label>
+   <select id="Contactenos" onclick="contactenosme()">  
+
+    <option value=""></option>  
+    <option value="WhatsApp">WhatsApp</option>
+    <option value="PBX">PBX</option>
+    <option value="Dirección">Dirección</option>
+   </select>
+
+
+   <div id="WhatsApp" class="infocontactos">
+    <p>Buen día aprecidado cliente, agradecemos que seas parte de nuestra comunidad El campesinito</p>
+    <p>Para comunicarte vía WhatsApp, puedes escribir al número 300 811 9842</p>
+
+    
+   </div>
+
+   <div id="PBX" class="infocontactos">
+    <p>Para comunicarte al PXB del supermercado El campesinito marca al número 064 3221109</p>
+   </div>
+
+   
+   <div id="Dirección" class="infocontactos">
+    <div>
+       <center>
+            <p>Nuestras sucrusales</p>
+            <p>Calle 77 # 78 A 25</p>
+            </p>Carrera 13 # 14 40 violetasIII</p>
+        </center>
+    <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.587475968436!2d-75.602331252914!3d6.244367697234159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428dfb80fad05%3A0x42137cfcc7b53b56!2sMedell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1690949686026!5m2!1ses!2sco" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+   </div>
+   </div>
+
+   <script>
+    function contactenosme () {
+        var selectElement = document.getElementById("Contactenos");
+        var selectedValue = selectElement.value;
+        
+        var contenidoElements = document.getElementsByClassName("infocontactos");
+            for (var i = 0; i < contenidoElements.length; i++) {
+                contenidoElements[i].style.display = "none";
+            
+            }
+
+            var contenidoElement = document.getElementById(selectedValue);
+            if (contenidoElement) {
+                contenidoElement.style.display = "block";
+            }
+
+        }
+   </script>
+
+ 
+
+<!Actividad>
+
+  
+
+   <button id="botón" onclick="mostrarservicio();">  Solicitud de Servicio </button>
+
+   <script>
+
+    function mostrarservicio () {
+      document.getElementById("servicio").style.display = 'block';
+    }
+  </script>
+
+
+   <div id="servicio">
+
+    <br>
+
+
+        
+        <div class="container_8">
+            <form action="/validar" method="post">
+                <div class="mb-3">
+                  <label class="form-label" >correo</label>
+                  <input type="email" class="form-control" name="correo" id="correo" placeholder="example@domain.com"> <br><br>
+                </div>
+            
+                <div class="mb-4">
+                  <label class="form-label" >nombre</label>
+                  <input type="text" class="form-control" name="nombre" id="nombre" placeholder="wilinton quit"> <br><br>
+                </div>
+            
+                <div class="mb-4">
+                  <label class="form-label" >pasword</label>
+                  <input type="password" class="form-control" name="password" id="password" placeholder="***********"> <br><br>
+                </div>
+            
+                <div class="mb-4">
+                  <label class="form-label" >Numero de telefono</label>
+                  <input type="number" class="form-control" name="telefono" id="telefono" placeholder="57319286"> <br><br>
+                </div>
+            
+                <div class="container_8">
+                  <button type="submit" class="btn btn-primary" id="btnAdd" onclick="addData() ">Enviar Datos </button>
+                </div>
+              </div>
+              </form>
+           
+                <hr>
+                <table class="table table-bordered" id="tableData">
+        <thead>
+          <tr>
+            <th scope="col">Correo</th>
+            <th scope="col">Nombre Completo</th>
+            <th scope="col">Contraseña</th>
+            <th scope="col">Numero De Telefono</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+
+
+
+   
+
+    <label for=" Servicio-Solicitado"> Servicio Solicitado</label>
+    <select id="Servicio-Solicitado" onclick="serviciosol()">  
+     <option value=""></option>  
+     <option value="Venta productos">Venta productos</option>
+     <option value="Cotizar"> Cotizar</option>
+     <option value="Proveedor">Proveedor</option>
+    </select>
+
+
+    <div id="Venta productos" class="infosolicitud">
+
+        <input type="checkbox" name="Articulos de Aseo">Articulos de Aseo<br>
+        <input type="checkbox" name="Panaderia "> Panaderia<br>
+        <input type="checkbox" name="Lagumbres"> Legumbres <br>
+        <input type="checkbox" name="Vegetales"> Vegetales<br>
+        <input type="checkbox" name="Frutas O cereales"> frutas o cereales<br>
+ 
+ 
+    </div>
+
+    <div id="Cotizar" class="infocotizar">
+        <br>
+        <select name="cotizar-producto" onclick="cotizarme()">
+            <label for="cotizar-producto">Cotizar Producto</label>
+            <option value=""></option>  
+            <option value="Productos de aseo">Productos de aseo</option>
+            <option value="Productos de panaderia">Productos de panaderia</option>
+            <option value="Productos carnicos">Productos carnicos</option>
+        </select>
+        </br>
+        </div>
+
+
+
+
+<div id="Proveedor" class="infoproveedor">
+ <br>
+
+        <input type="radio" name="button">carnicos
+        <input type="radio" name="button"> Frigorifico
+        <input type="radio" name="button"> Aseo o Panaderia 
+        
+</br>
+</div>
+
+
+
+
+
+  <script>
+    function serviciosol () {
+        var selectElement = document.getElementById("Servicio-Solicitado");
+        var selectedValue = selectElement.value;
+        
+        var contenidoElements = document.getElementsByClassName("infosolicitud");
+            for (var i = 0; i < contenidoElements.length; i++) {
+                contenidoElements[i].style.display = "none";
+            
+            }
+
+            var contenidoElement = document.getElementById(selectedValue);
+            if (contenidoElement) {
+                contenidoElement.style.display = "block";
+            }
+
+        }
+   </script>
+
+<scr src="main.js"></script>
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+</form>
+
+
+   
+</body>
+</html>
