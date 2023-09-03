@@ -8,11 +8,13 @@
 	<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" href="../css/styles.css"> -->
+    <link rel="stylesheet" href="/static/css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="app.js" async></script>
-    <link rel="stylesheet" href="/css/styles">
+    <!-- <script src="../css/app.js" async></script> -->
+    <script src="/static/css/app.js" async></script>
+    <!-- <link rel="stylesheet" href="/css/styles"> -->
 
 
     <style>
@@ -96,7 +98,7 @@
    </div>
 </div>
    <video controls>
-    <source src="imagenes/stock-footage-agriculture-senior-farmer-walks-through-green-field-with-harvest-box-agricultural-business (1).webm" type="video/mp4">
+    <source src="/static/imagenes/stock-footage-agriculture-senior-farmer-walks-through-green-field-with-harvest-box-agricultural-business (1).webm" type="video/mp4">
    </video>
 </div>
 
@@ -107,7 +109,7 @@
    </div>
 </div>
    <video controls>
-    <source src="imagenes/stock-footage-hand-watering-a-young-plant.webm">
+    <source src="/static/imagenes/stock-footage-hand-watering-a-young-plant.webm">
    </video>
 </div>
 
@@ -159,49 +161,49 @@
         <div class="contenedor-items">
             <div class="item">
                 <span class="titulo-item">panal de huevos</span>
-                <img src="imagenes/huevos.jpeg"  alt="" class="img-item">
+                <img src="/static/imagenes/huevos.jpeg"  alt="" class="img-item">
                 <span class="precio-item">$30.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <span class="titulo-item">papa pastusa</span>
-                <img src="imagenes/papa.jpeg" height="185px" width="273px" alt="" class="img-item">
+                <img src="/static/imagenes/papa.jpeg" height="185px" width="273px" alt="" class="img-item">
                 <span class="precio-item">$2.400</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <span class="titulo-item">espinaca</span>
-                <img src="imagenes/espinaca.jpeg" alt="" class="img-item">
+                <img src="/static/imagenes/espinaca.jpeg" alt="" class="img-item">
                 <span class="precio-item">$4.000</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <span class="titulo-item">lechuga</span>
-                <img src="imagenes/lechuga.jpeg" alt="" class="img-item">
+                <img src="/static/imagenes/lechuga.jpeg" alt="" class="img-item">
                 <span class="precio-item">$5.800</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <span class="titulo-item">yuca</span>
-                <img src="imagenes/yuca.jpeg" alt="" class="img-item">
+                <img src="/static/imagenes/yuca.jpeg" alt="" class="img-item">
                 <span class="precio-item">$5.400</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <span class="titulo-item">aguacate</span>
-                <img src="imagenes/aguacate.jpeg" alt="" class="img-item">
+                <img src="/static/imagenes/aguacate.jpeg" alt="" class="img-item">
                 <span class="precio-item">$4.700</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <span class="titulo-item">coliflor</span>
-                <img src="imagenes/coliflor.jpeg" alt="" class="img-item">
+                <img src="/static/imagenes/coliflor.jpeg" alt="" class="img-item">
                 <span class="precio-item">$4.900</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
             <div class="item">
                 <span class="titulo-item">garbanzo</span>
-                <img src="imagenes/garbanzo.jpeg" alt="" class="img-item">
+                <img src="/static/imagenes/garbanzo.jpeg" alt="" class="img-item">
                 <span class="precio-item">$6.900</span>
                 <button class="boton-item">Agregar al Carrito</button>
             </div>
@@ -466,7 +468,7 @@
             <form action="/validar" method="post">
                 <div class="mb-3">
                   <label class="form-label" >correo</label>
-                  <input type="email" class="form-control" name="correo" id="correo" placeholder="example@domain.com"> <br><br>
+                  <input type="email" class="form-control" name="correo" id="inputmail" placeholder="example@domain.com"> <br><br>
                 </div>
             
                 <div class="mb-4">
