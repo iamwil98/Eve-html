@@ -1,8 +1,7 @@
 {
   "name": "htdocs",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "main": "mysql.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mysql": "^2.18.1"
-  }
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "typed.js": "^2.0.16",
+    "xpress": "^2.4.6"
+  },
+  "description": ""
 }
